@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "256566704096",
+    "project_id": "ordersboard-tp",
+    "storage_bucket": "ordersboard-tp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:256566704096:android:c3b75053d31b239d675d85",
+        "android_client_info": {
+          "package_name": "com.orderboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "256566704096-81plib7h9dd4b0crtalnhhpldgqcs9tb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.orderboard",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "256566704096-6v7etev9u06g3l99llps9n0mvv5nmjkv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFJFdb0-MSzK8TiDFjadNkfl1gxVJ7Noo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "256566704096-6v7etev9u06g3l99llps9n0mvv5nmjkv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
