@@ -1,10 +1,11 @@
 import * as React from 'react';
-import { Text, View } from 'react-native';
+import SignInView from '../components/signIn/SignInView';
+import Screen from './Screen';
 
 const LoginScreen = () => (
-  <View>
-    <Text>Login Screen</Text>
-  </View>
+  <Screen>
+    <SignInView />
+  </Screen>
 );
 
 export default LoginScreen;
