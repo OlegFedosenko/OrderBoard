@@ -3,4 +3,5 @@ export type RootState = {
 };
 export type SessionState = {
   user: object | null;
+  accessToken: string;
 };
