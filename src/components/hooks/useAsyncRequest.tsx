@@ -19,7 +19,7 @@ export const useAsyncRequest = (action: Function) => {
         setLoading(false);
       }
     },
-    [action],
+    [action, dispatch],
   );
 
   return { makeRequest, loading, error };
