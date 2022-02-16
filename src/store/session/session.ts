@@ -1,8 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { LOGIN, STOP_SESSION, successAction } from '../actionTypes';
 import { SessionState } from '../types';
+import { transformGoogleUserDataToTamplateUser } from './utils';
 
-const initialState: SessionState = { user: null, accessToken: '' };
+const initialState: SessionState = { user: null, accessToken: '', idToken: '' };
 
 export const session = createSlice({
   name: 'session',
@@ -10,9 +11,10 @@ export const session = createSlice({
   reducers: {},
   extraReducers: {
     [successAction(LOGIN)]: (state, action) => {
-      const { user } = action.payload;
-      state.user = user;
-      state.accessToken = 'accessToken';
+      const { user, accessToken, idToken } = action.payload;
+      state.user = transformGoogleUserDataToTamplateUser(user);
+      state.accessToken = accessToken;
+      state.idToken = idToken;
     },
     [STOP_SESSION]: state => {
       state.user = null;
