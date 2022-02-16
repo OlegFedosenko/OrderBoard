@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
   container: {
     minWidth: '100%',
     minHeight: '100%',
-    backgroundColor: colors.primaryGrean,
+    backgroundColor: colors.black,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
