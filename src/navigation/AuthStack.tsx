@@ -5,9 +5,13 @@ import { RootStackParamList } from './types';
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const AuthStack = () => {
+  const navigatorScreenOptions = {
+    headerShown: false,
+    headerMode: 'screen',
+  };
   return (
-    <Stack.Navigator>
-      <Stack.Screen name="Login" component={LoginScreen} />
+    <Stack.Navigator screenOptions={navigatorScreenOptions}>
+      <Stack.Screen name="signIn" component={LoginScreen} />
     </Stack.Navigator>
   );
 };
