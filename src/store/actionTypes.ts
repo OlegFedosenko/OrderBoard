@@ -1,5 +1,9 @@
-export const successAction = (action: string): string => `${action}_SUCCESS`;
-export const failureAction = (action: string): string => `${action}_FAILURE`;
+export type Action = 'LOGIN' | 'STOP_SESSION' | 'SIGN_IN_GOOGLE';
+type Success = `${Action}/fulfilled`;
+type Failure = `${Action}/rejected`;
+
+export const successAction = (action: Action): Success => `${action}/fulfilled`;
+export const failureAction = (action: Action): Failure => `${action}/rejected`;
 
 //SESSION
 export const LOGIN = 'LOGIN';

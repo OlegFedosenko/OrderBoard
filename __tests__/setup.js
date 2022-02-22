@@ -5,5 +5,5 @@ jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
 export const mockFormDataAppend = jest.fn();
 export const mockFormData = jest.fn().mockImplementation(() => ({ append: mockFormDataAppend }));
 jest.mock('@react-native-google-signin/google-signin', () => {
-  return { GoogleSigninButton: () => null };
+  return { GoogleSigninButton: () => null, GoogleSignin: { configure: () => null } };
 });

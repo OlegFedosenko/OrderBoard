@@ -9,10 +9,9 @@ const GoogleSignInView = () => {
   const signIn = async () => {
     await makeRequest();
   };
-  const isDisabled = loading;
   return (
     <View>
-      <GoogleSigninButtonView onPress={signIn} disabled={isDisabled} />
+      <GoogleSigninButtonView onPress={signIn} disabled={loading} />
     </View>
   );
 };

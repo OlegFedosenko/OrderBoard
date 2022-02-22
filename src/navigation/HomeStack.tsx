@@ -4,12 +4,11 @@ import { RootStackParamList } from './types';
 import HomeView from '../components/home/HomeView';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
-
+const navigatorScreenOptions = {
+  headerShown: false,
+  headerMode: 'screen',
+};
 const HomeStack = () => {
-  const navigatorScreenOptions = {
-    headerShown: false,
-    headerMode: 'screen',
-  };
   return (
     <Stack.Navigator screenOptions={navigatorScreenOptions}>
       <Stack.Screen name="home" component={HomeView} />

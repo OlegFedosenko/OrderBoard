@@ -7,9 +7,9 @@ type Props = {
   disabled: boolean;
 };
 
-const GoogleSigninButtonView: FC<Props> = ({ onPress, disabled }) => {
-  return <GoogleSigninButton onPress={onPress} style={styles.button} size={1} disabled={disabled} />;
-};
+const GoogleSigninButtonView: FC<Props> = ({ onPress, disabled }) => (
+  <GoogleSigninButton onPress={onPress} style={styles.button} size={1} disabled={disabled} />
+);
 
 const styles = StyleSheet.create({
   button: { width: 260, height: 50 },

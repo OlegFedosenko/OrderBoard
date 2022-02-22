@@ -7,12 +7,12 @@ import { accessToken as getAccessToken } from '../store/session/selector';
 import { useSelector } from 'react-redux';
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
+const navigatorScreenOptions = {
+  headerShown: false,
+  headerMode: 'screen',
+};
 
 const RootSwitchNavigator: FC = () => {
-  const navigatorScreenOptions = {
-    headerShown: false,
-    headerMode: 'screen',
-  };
   const accessToken = useSelector(getAccessToken);
 
   return (
