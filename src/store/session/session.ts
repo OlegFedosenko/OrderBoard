@@ -3,7 +3,7 @@ import { LOGIN, STOP_SESSION, successAction } from '../actionTypes';
 import { SessionState } from '../types';
 import { transformGoogleUserDataToTamplateUser } from './utils';
 
-const initialState: SessionState = { user: null, accessToken: '', idToken: '' };
+const initialState: SessionState = { user: null, accessToken: null, idToken: null };
 
 export const session = createSlice({
   name: 'session',
@@ -18,7 +18,7 @@ export const session = createSlice({
     },
     [STOP_SESSION]: state => {
       state.user = null;
-      state.accessToken = '';
+      state.accessToken = null;
     },
   },
 });

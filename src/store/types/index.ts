@@ -3,8 +3,8 @@ export type RootState = {
 };
 export type SessionState = {
   user: User | null;
-  accessToken: string;
-  idToken: string;
+  accessToken: string | null;
+  idToken: string | null;
 };
 export type User = {
   id: string;

@@ -1,5 +1,6 @@
 import { useCallback, useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { getErrorText } from '../../services/errorHandler';
 
 export const useAsyncRequest = (action: Function) => {
   const [loading, setLoading] = useState(false);
@@ -12,8 +13,8 @@ export const useAsyncRequest = (action: Function) => {
         setLoading(true);
         const response = await dispatch(action(data));
         return response;
-      } catch (errorData) {
-        setError('errorData');
+      } catch (errorData: any) {
+        setError(getErrorText(errorData));
         throw errorData;
       } finally {
         setLoading(false);
